@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- Security Headers -->
+    <!-- HSTS: Force HTTPS connections for 1 year with preload and includeSubDomains -->
+    <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains; preload">
+    
+    <!-- X-Frame-Options: Prevent clickjacking attacks -->
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    
+    <!-- Cross-Origin Opener Policy: Prevent cross-origin attacks -->
+    <meta http-equiv="Cross-Origin-Opener-Policy" content="same-origin">
+    
+    <!-- X-Content-Type-Options: Prevent MIME type sniffing -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    
+    <!-- Referrer Policy: Control referrer information -->
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    
+    <!-- Additional Security and SEO Meta Tags -->
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="JomTravel">
+    <meta name="description" content="Book your dream vacation with JomTravel. Easy booking process for travel packages to Japan, Italy, and South Korea.">
+    <meta name="keywords" content="travel booking, vacation packages, Japan, Italy, South Korea, tourism">
+    
+    <title>JomTravel - Book Your Trip</title>
+    
+    <!-- Google Fonts with proper crossorigin and preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="booking.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    
+    <!-- Animate.css for animations -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+    <!-- Favicon with proper type -->
+    <link rel="icon" href="img/logo.png" type="image/png">
+    <link rel="apple-touch-icon" href="img/logo.png">
+  </head>
+  
+  <body>
+    <!-- Navigation bar with improved accessibility -->
+    <nav class="navbar navbar-expand-lg navbar-light shadow-sm sticky-top" style="background-color: #8d7b68;" role="navigation" aria-label="Main navigation">
+      <div class="w-100 px-4 d-flex align-items-center justify-content-between">
+        <a class="navbar-brand fs-3 d-flex align-items-center gap-2" href="index.html" aria-label="Return to JomTravel Home">
+          <img src="img/logo.png" alt="JomTravel Logo" style="height:40px; width:40px; border-radius:50%;" loading="lazy">
+          <span style="color:#ffffff;">JomTravel</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link navbar-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link navbar-link" href="#destinations">Destinations</a></li>
+            <li class="nav-item"><a class="nav-link navbar-link" href="#about">About</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link navbar-link dropdown-toggle" href="#" id="navbarContactDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Contact</a>
+              <ul class="dropdown-menu" aria-labelledby="navbarContactDropdown">
+                <li><a class="dropdown-item" href="https://facebook.com" target="_blank" rel="noopener noreferrer"><i class="bi bi-facebook me-2" aria-hidden="true"></i>Facebook</a></li>
+                <li><a class="dropdown-item" href="https://instagram.com" target="_blank" rel="noopener noreferrer"><i class="bi bi-instagram me-2" aria-hidden="true"></i>Instagram</a></li>
+                <li><a class="dropdown-item" href="https://wa.me/601112340485" target="_blank" rel="noopener noreferrer"><i class="bi bi-whatsapp me-2" aria-hidden="true"></i>WhatsApp</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="tel:011-12340485"><i class="bi bi-telephone me-2" aria-hidden="true"></i>011-12340485</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    
+    <!-- Main Booking Section with improved accessibility -->
+    <main class="booking-bg" role="main">
+      <div class="container min-vh-100 d-flex align-items-center justify-content-center">
+        <div class="d-flex flex-row align-items-center justify-content-center w-100 booking-main-row">
+          <div class="booking-title-col d-flex flex-column justify-content-center align-items-start p-4 flex-shrink-0">
+            <h1 class="booking-title mb-2">Book Your Trip</h1>
+            <hr class="booking-title-hr mb-4">
+          </div>
+          <div class="booking-card p-4">
+            <form class="booking-form" id="bookingForm" role="form" aria-label="Travel booking form">
+              <div class="row g-3">
+                <div class="col-md-12">
+                  <label class="form-label booking-label" for="fullName">Full Name</label>
+                  <input type="text" class="form-control booking-input" id="fullName" placeholder="Your Name" required aria-required="true">
+                </div>
+                <div class="col-md-8">
+                  <label class="form-label booking-label" for="email">Email Address</label>
+                  <input type="email" class="form-control booking-input" id="email" placeholder="youremail@address.com" required aria-required="true">
+                </div>
+                <div class="col-md-4">
+                  <label class="form-label booking-label" for="contactNumber">Contact Number</label>
+                  <input type="tel" class="form-control booking-input" id="contactNumber" placeholder="eg. 012345678" required pattern="[0-9]{9,15}" aria-required="true" aria-describedby="contactHelp">
+                  <div id="contactHelp" class="form-text">Enter 9-15 digits only</div>
+                </div>
+                <div class="col-md-12">
+                  <label class="form-label booking-label" for="packageSelect">Preferred Package</label>
+                  <select class="form-select booking-input" id="packageSelect" required aria-required="true" aria-label="Select your preferred travel package">
+                    <option value="">- Please Select -</option>
+                    <option value="Tokyo City Lights">Tokyo City Lights</option>
+                    <option value="Kyoto Heritage Escape">Kyoto Heritage Escape</option>
+                    <option value="Roman Holiday">Roman Holiday</option>
+                    <option value="Venice & Florence Romance">Venice & Florence Romance</option>
+                    <option value="Seoul City Vibes">Seoul City Vibes</option>
+                    <option value="Jeju Island Escape">Jeju Island Escape</option>
+                  </select>
+                </div>
+                <div class="col-md-12">
+                  <label class="form-label booking-label" for="travelDate">Travel Date</label>
+                  <input type="date" class="form-control booking-input" id="travelDate" placeholder="Choose a date" required aria-required="true">
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label booking-label" for="adults">No. of Adult</label>
+                  <input type="number" class="form-control booking-input" id="adults" min="1" value="1" required aria-required="true" aria-label="Number of adult travelers">
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label booking-label" for="children">No. of Child</label>
+                  <input type="number" class="form-control booking-input" id="children" min="0" value="0" required aria-required="true" aria-label="Number of child travelers">
+                </div>
+                <div class="col-12 text-center mt-3">
+                  <div class="total-price-display mb-3" role="region" aria-label="Price calculation">
+                    <h4 class="text-muted mb-2">Total Price</h4>
+                    <div class="price-breakdown">
+                      <p class="mb-1"><small>Price per person: <span id="pricePerPerson">RM0</span></small></p>
+                      <p class="mb-1"><small>Adults: <span id="adultsCount">1</span> × <span id="adultsPrice">RM0</span></small></p>
+                      <p class="mb-1"><small>Children: <span id="childrenCount">0</span> × <span id="childrenPrice">RM0</span></small></p>
+                    </div>
+                    <h3 class="total-amount" id="totalAmount">RM0</h3>
+                  </div>
+                  <button type="submit" class="theme-btn w-50" aria-label="Submit booking form">Book Now</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
+    
+    <!-- Footer with improved accessibility -->
+    <footer class="footer mt-5" role="contentinfo">
+      <div class="container">
+        <p class="mb-1">&copy; 2025 JomTravel. All rights reserved.</p>
+      </div>
+    </footer>
+    
+    <!-- JavaScript Libraries with proper loading attributes -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="booking.js"></script>
+    
+    <!-- Inline JavaScript with improved error handling and comments -->
+    <script>
+      // Package prices per person - centralized pricing data
+      const packagePrices = {
+        'Tokyo City Lights': 4499,
+        'Kyoto Heritage Escape': 5199,
+        'Roman Holiday': 6999,
+        'Venice & Florence Romance': 7499,
+        'Seoul City Vibes': 4199,
+        'Jeju Island Escape': 5799
+      };
+
+      /**
+       * Get URL parameter value safely
+       * @param {string} name - Parameter name to retrieve
+       * @returns {string} Parameter value or empty string if not found
+       */
+      function getUrlParameter(name) {
+        try {
+          name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+          const regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+          const results = regex.exec(location.search);
+          return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+        } catch (error) {
+          console.warn('Error parsing URL parameter:', error);
+          return '';
+        }
+      }
+
+      /**
+       * Calculate and update total price display with error handling
+       */
+      function updateTotalPrice() {
+        try {
+          const packageSelect = document.getElementById('packageSelect');
+          const adultsInput = document.getElementById('adults');
+          const childrenInput = document.getElementById('children');
+          
+          if (!packageSelect || !adultsInput || !childrenInput) {
+            console.warn('Required form elements not found');
+            return;
+          }
+          
+          const selectedPackage = packageSelect.value;
+          const adults = parseInt(adultsInput.value) || 0;
+          const children = parseInt(childrenInput.value) || 0;
+          
+          const pricePerPerson = packagePrices[selectedPackage] || 0;
+          const totalPrice = (adults + children) * pricePerPerson;
+          
+          // Update display elements with proper error checking
+          const elements = {
+            pricePerPerson: document.getElementById('pricePerPerson'),
+            adultsCount: document.getElementById('adultsCount'),
+            adultsPrice: document.getElementById('adultsPrice'),
+            childrenCount: document.getElementById('childrenCount'),
+            childrenPrice: document.getElementById('childrenPrice'),
+            totalAmount: document.getElementById('totalAmount')
+          };
+          
+          // Safely update each element
+          if (elements.pricePerPerson) elements.pricePerPerson.textContent = `RM${pricePerPerson.toLocaleString()}`;
+          if (elements.adultsCount) elements.adultsCount.textContent = adults;
+          if (elements.adultsPrice) elements.adultsPrice.textContent = `RM${pricePerPerson.toLocaleString()}`;
+          if (elements.childrenCount) elements.childrenCount.textContent = children;
+          if (elements.childrenPrice) elements.childrenPrice.textContent = `RM${pricePerPerson.toLocaleString()}`;
+          if (elements.totalAmount) elements.totalAmount.textContent = `RM${totalPrice.toLocaleString()}`;
+          
+        } catch (error) {
+          console.error('Error updating price calculation:', error);
+        }
+      }
+
+      // Initialize form when page loads with proper error handling
+      document.addEventListener('DOMContentLoaded', function() {
+        try {
+          // Auto-fill package from URL parameter
+          const packageParam = getUrlParameter('package');
+          if (packageParam) {
+            const packageSelect = document.getElementById('packageSelect');
+            if (packageSelect && packagePrices[packageParam]) {
+              packageSelect.value = packageParam;
+            }
+          }
+          
+          // Set up event listeners for real-time price updates
+          const packageSelect = document.getElementById('packageSelect');
+          const adultsInput = document.getElementById('adults');
+          const childrenInput = document.getElementById('children');
+          
+          if (packageSelect) packageSelect.addEventListener('change', updateTotalPrice);
+          if (adultsInput) adultsInput.addEventListener('input', updateTotalPrice);
+          if (childrenInput) childrenInput.addEventListener('input', updateTotalPrice);
+          
+          // Calculate initial price
+          updateTotalPrice();
+          
+        } catch (error) {
+          console.error('Error initializing booking form:', error);
+        }
+      });
+    </script>
+  </body>
+</html>

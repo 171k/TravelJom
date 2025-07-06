@@ -1,0 +1,8 @@
+[
+  { "name": "Tokyo City Lights", "duration": "5D4N", "price": 4499, "destination": "Japan", "image": "tokyo.webp" },
+  { "name": "Kyoto Heritage Escape", "duration": "6D5N", "price": 5199, "destination": "Japan", "image": "kyoto.webp" },
+  { "name": "Roman Holiday", "duration": "7D6N", "price": 6999, "destination": "Italy", "image": "roman.webp" },
+  { "name": "Venice & Florence Romance", "duration": "6D5N", "price": 7499, "destination": "Italy", "image": "venice.webp" },
+  { "name": "Seoul City Vibes", "duration": "5D4N", "price": 4199, "destination": "South Korea", "image": "seoul.webp" },
+  { "name": "Jeju Island Escape", "duration": "6D5N", "price": 5799, "destination": "South Korea", "image": "jeju.webp" }
+] 
